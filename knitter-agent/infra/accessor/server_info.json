@@ -1,0 +1,24 @@
+{
+"host": {
+"hostname": "node-hostname",
+"serverid": "082122f8-bfc4-422b-80bb-6c9af3b1989e",
+"tenantid": "a4d775c2b52147dd819d21e769d70a95",
+"infra_eth": "eth0",
+"infra_ip": "192.168.77.5"
+},
+"openstack": {
+"username": "yzh",
+"password": "Aa888888",
+"url": "http://10.92.247.106:5000/v2.0",
+"tenantid": "a4d775c2b52147dd819d21e769d70a95"
+},
+"etcd": {
+"url": "http://127.0.0.1:2379"
+},
+"k8s": {
+"url": "10.92.247.111:4001"
+},
+"vnpm": {
+"url": "12.12.12.12:3333"
+}
+}

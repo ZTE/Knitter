@@ -1,0 +1,5 @@
+#ignore
+-timeout=600s
+-covermode=count
+-coverpkg=knitter-manager/routers,knitter-manager/controllers,knitter-manager/models
+#m11@ubuntu:~/spiderman/src/manager/tests$ go test -run TestUnit* -coverpkg=knitter-manager/routers,knitter-manager/controllers,knitter-manager/models  -v

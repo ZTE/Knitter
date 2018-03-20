@@ -1,0 +1,19 @@
+sudo: required
+
+language: go
+
+service:
+  - docker
+
+go:
+  - 1.9.x
+  - master
+
+install:
+  - make install-extra
+
+script:
+  - make verify
+  - make test-ut
+  - make build
+

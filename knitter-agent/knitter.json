@@ -1,0 +1,40 @@
+{
+  "conf": {
+    "agent": {
+      "cluster_type": "k8s",
+      "cluster_uuid": "2ccd499e-42b5-4075-92df-8bbc0ed52bbf",
+      "etcd": {
+        "api_version": 3,
+        "urls": "http://172.120.0.209:2379"
+      },
+      "external": {
+        "ip": "172.120.0.211"
+      },
+      "host": {
+        "ip": "172.120.0.211",
+        "mtu": "1400",
+        "type": "virtual_machine",
+        "vm_id": "f0c79d22-a79b-4be4-b369-bd93d3e82dec"
+      },
+      "internal": {
+        "ip": "172.120.0.211"
+      },
+      "k8s": {
+        "url": "http://172.120.0.209:8080"
+      },
+      "manager": {
+        "url": "http://172.120.0.209:9527/api/v1"
+      },
+      "monitor": {
+        "url": "http://172.120.0.209:6001/api/v1"
+      },
+      "run_mode": {
+        "sync": true,
+        "type": "overlay"
+      }
+    },
+    "dev": {
+      "recover_flag": true
+    }
+  }
+}

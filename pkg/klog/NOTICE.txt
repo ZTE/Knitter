@@ -1,0 +1,4 @@
+This package includes glog codes(https://github.com/golang/glog) originally developed by Google Inc.
+Knitter extends glog by adding rich fields to output in order to enhance user experience and developer debugging.
+Knitter changes the package name from glog to klog.
+

@@ -1,0 +1,20 @@
+{
+  "conf": {
+    "manager": {
+      "etcd": {
+        "api_version": 3,
+        "urls": "http://172.120.0.209:2379"
+      },
+      "self_service": {
+        "url": "http://172.120.0.209:9527/nw/v1"
+      },
+      "interval": {
+        "senconds": "15"
+      },
+      "net_quota": {
+        "no_admin": "10",
+        "admin": "100"
+      }
+    }
+  }
+}

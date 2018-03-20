@@ -1,0 +1,8 @@
+{
+  "GetCniMasterServerUrlFromConfigure_ok":{
+    "url": "123.123.123.123:1234"
+  },
+  "GetCniMasterServerUrlFromConfigure_err":{
+    "url": ""
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "conf": {
+    "monitor": {
+      "log_dir": "/root/info/logs/nwnode",
+      "manager": {
+        "url": "http://172.120.0.209:9527/api/v1"
+      },
+      "etcd": {
+        "api_version": 3,
+        "urls": "http://172.120.0.209:2379"
+      }
+    }
+  }
+}
+
+

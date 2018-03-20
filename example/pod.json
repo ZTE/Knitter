@@ -1,0 +1,15 @@
+{
+    "apiVersion": "v1",
+    "kind": "Pod",
+    "metadata": {
+        "name": "nwrfpod1517464975-pod-0-1-hb83l",
+        "namespace": "admin"},
+    "spec": {
+        "containers": [
+            {
+                "image": "172.16.2.209:6666/network/nwrf:v1",
+                "imagePullPolicy": "IfNotPresent",
+                "name": "nwrf"
+            }
+        ]}
+}
