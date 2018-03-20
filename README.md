@@ -13,7 +13,7 @@ Knitter includes three components:
 - **Knitter-manager**: it runs on a central controller node (which can be K8S master or a separate host). It interactives with network infrastructure and manages the network(s) that used by the cluster. `Knitter-manager` serves as an API server.
 - **Knitter-plugin**: it's a CNI plugin whick is invoked by kubelet with CNI API. It forwards the network setting up request from kubelet to `Knitter-agent` and sends the result back.
 - **Knitter-agent**: it runs on each node of the K8S cluster. It processes the forwarded request fromm `Knitter-plugin`. It queries networks configured in annotations of pod spec from kube-apiserver. Then it requests `Knitter-manager` to allocate all the needed resources. Once all things are ready, it sets up the network stack for the pod. Once it finishes, it sends the result back to `Knitter-plugin`.
-- **Knitter-monitor**:
+- **Knitter-monitor**: it also runs on a central controller node(which can be K8S master or a a separate host).It Mainly reponsible for parsing the configuration and managing logical resources.
 
 
 ![components](./docs/images/knitter-components.png)
