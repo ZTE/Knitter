@@ -33,11 +33,11 @@ All knitter related binaries are placed into temp directory "_output", normally 
 
 ## Usage
 Knitter is not a only CNI plugin, but it is a full network solutions.So if you'd like run knitter, you should install all related compontents of knitter including knitter-manger、knitter-monitor、knitter-agent、knitter-plugin.
-All knitter binaries have a seperated configuration(use json formation currently), and you can check a full description from [knitter docs](https://github.com/HyperNetworks/Knitter/tree/master/docs).
+All knitter binaries have a seperated configuration(use json formation currently), and you can check a full description from [knitter docs](https://github.com/ZTE/Knitter/tree/master/docs).
 
 ## Contributing
 Contributions should be made via pull requests. Pull requests will be reviewed by one or more maintainers and merged when acceptable.
-All contributions are welcome - Knitter uses the Apache 2 license and does not require any contributor agreement to submit patches. Please open issues for any bugs or problems you encounter. We hope that before contributing, please make the effort to coordinate with the maintainers of the project before submitting high impact PRs. This will prevent you from doing extra work that may or may not be merged.Larger changes typically work best with design documents , similar to those found in [knitter docs](https://github.com/HyperNetworks/Knitter/tree/master/docs) . These are focused on providing context of the design at the time the feature was conceived and can inform future documentation contributions . Make sure that new tests are added for bugs in order to catch regressions and tests for new features to exercise the new functionality that is added .
+All contributions are welcome - Knitter uses the Apache 2 license and does not require any contributor agreement to submit patches. Please open issues for any bugs or problems you encounter. We hope that before contributing, please make the effort to coordinate with the maintainers of the project before submitting high impact PRs. This will prevent you from doing extra work that may or may not be merged.Larger changes typically work best with design documents , similar to those found in [knitter docs](https://github.com/ZTE/Knitter/tree/master/docs) . These are focused on providing context of the design at the time the feature was conceived and can inform future documentation contributions . Make sure that new tests are added for bugs in order to catch regressions and tests for new features to exercise the new functionality that is added .
 
 
 If you want to run the test suite(especially e2e test), make sure you have your environment set up, and from the origin directory run:
