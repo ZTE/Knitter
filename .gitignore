@@ -1,3 +1,7 @@
 _output/
 release-*
 bin/
+
+# IntelliJ IDEA project files.
+.idea/
+*.iml
