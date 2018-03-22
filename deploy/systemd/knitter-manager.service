@@ -1,9 +1,9 @@
 [Unit]
-Description=The Knitter Agent
+Description=The Knitter Manager
 Documentation=https://github.com/ZTE/Knitter/tree/master/docs/
 
 [Service]
-ExecStart=/opt/knitter-agent/knitter-agent
+ExecStart=/opt/knitter-manager/knitter-manager
 Restart=always
 StartLimitInterval=0
 
