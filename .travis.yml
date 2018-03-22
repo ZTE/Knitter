@@ -1,3 +1,4 @@
+
 sudo: required
 
 language: go
@@ -11,9 +12,10 @@ go:
 
 install:
   - make install-extra
+  - go get github.com/mattn/goveralls
 
 script:
   - make verify
-  - make test-ut
+  - make test-cover
   - make build
 

@@ -135,6 +135,15 @@ test-ut:
 	go test -timeout=20m -race ./pkg/... ./knitter-agent/... ./knitter-manager/... ./knitter-monitor/... ./knitter-plugin/... $(BUILD_TAGS) $(GO_LDFLAGS) $(GO_GCFLAGS)
 .PHONY: test-ut
 
+# Run coverage checking
+#
+# Example:
+#make test-cover
+test-cover:
+	PATH="$HOME/gopath/bin:$PATH"
+	./hack/cover.sh --coveralls
+.PHTONY: test-cover
+
 install-extra:install-gometalinter
 .PHONY: install-extra
 
@@ -174,6 +183,7 @@ probe-test:
 #   make clean
 clean:
 	rm -rf ./_output
+	rm -rf .cover
 .PHONY: clean
 
 
