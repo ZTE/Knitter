@@ -36,7 +36,7 @@
 Knitter includes four components: knitter-manager, knitter-monitor, knitter-pluging and knitter-agent. The architecture is shown as below.
 
 
-![Knitter Architecture](./docs/images/knitter-arch.png)
+![Knitter Architecture](./images/knitter-arch.png)
 
 
 ### Knitter Manager
@@ -68,5 +68,5 @@ Knitter Agent is the execution entity for networks setting up of Pod. It gets ne
 
 Take setting up networks for pod for example, the workflow of interaction among the components is shown as the below diagram.
 
-![Knitter Components workflow](./docs/images/workflow.png)
+![Knitter Components workflow](./images/workflow.png)
 
