@@ -1,7 +1,7 @@
 # Knitter
 [![Build Status](https://api.travis-ci.org/ZTE/Knitter.svg?style=flat-square)](https://travis-ci.org/ZTE/Knitter)
 [![Go Report Card](https://goreportcard.com/badge/github.com/ZTE/Knitter?style=flat-square)](https://goreportcard.com/report/github.com/ZTE/Knitter)
-
+[![Coverage Status](https://coveralls.io/repos/github/ZTE/Knitter/badge.svg?branch=master)](https://coveralls.io/github/ZTE/Knitter?branch=master)
 <div><img src='./docs/images/knitter.png' align=center width='400' height='108'></div>
 
 ## Overview
