@@ -23,12 +23,12 @@ echo "after GOROOT=$GOROOT    GOPATH=$GOPATH  GO=$GO   KNITTERPATH=${KNITTERPATH
 
 if [ ${OPERATION} = "build" ];then
 	############## build begin ##############
-	echo "============== build operation =============="
+	echo "============== building ${MODULENAME} =============="
 	cd  ${KNITTERPATH}/knitter-monitor
 	${GO}/go clean
-	${GO}/go build -v -x -ldflags "-X ${BUILDPKG}/pkg/version.moduleName=${MODULENAME} -X ${BUILDPKG}/pkg/version.verType=${VERTYPE} -X ${BUILDPKG}/pkg/version.versionInfo=${BRANCH_VERSION} -X ${BUILDPKG}/pkg/version.gitHash=${GITHASH} -X ${BUILDPKG}/pkg/version.buildTime=${BUILDTIME}"
+	${GO}/go build -ldflags "-X ${BUILDPKG}/pkg/version.moduleName=${MODULENAME} -X ${BUILDPKG}/pkg/version.verType=${VERTYPE} -X ${BUILDPKG}/pkg/version.versionInfo=${BRANCH_VERSION} -X ${BUILDPKG}/pkg/version.gitHash=${GITHASH} -X ${BUILDPKG}/pkg/version.buildTime=${BUILDTIME}"
 	if [ -f ${KNITTERPATH}/knitter-monitor/knitter-monitor ];then
-			echo "++++ build monitor success"  
+			echo "++++ build ${MODULENAME} success"
 			exit 0
 	else
 			echo "++++ build_moritor:: error knitter-monitor is not exit"
