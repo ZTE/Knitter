@@ -24,13 +24,13 @@ echo "after GOROOT=$GOROOT    GOPATH=$GOPATH  GO=$GO   KNITTERPATH=${KNITTERPATH
 
 if [ ${OPERATION} = "build" ];then
 	############## build begin ##############
-	echo "============== build operation =============="
+	echo "============== building ${MODULENAME} =============="
 	cd  ${KNITTERPATH}/knitter-plugin
 	${GO}/go clean
-	${GO}/go build -o knitter-plugin -v -x -ldflags "-X github.com/ZTE/Knitter/pkg/version.moduleName=${MODULENAME} -X github.com/ZTE/Knitter/pkg/version.verType=${VERTYPE} -X github.com/ZTE/Knitter/pkg/version.versionInfo=${BRANCH_VERSION} -X github.com/ZTE/Knitter/pkg/version.gitHash=${GITHASH} -X github.com/ZTE/Knitter/pkg/version.buildTime=${BUILDTIME}"
+	${GO}/go build -o knitter-plugin -ldflags "-X github.com/ZTE/Knitter/pkg/version.moduleName=${MODULENAME} -X github.com/ZTE/Knitter/pkg/version.verType=${VERTYPE} -X github.com/ZTE/Knitter/pkg/version.versionInfo=${BRANCH_VERSION} -X github.com/ZTE/Knitter/pkg/version.gitHash=${GITHASH} -X github.com/ZTE/Knitter/pkg/version.buildTime=${BUILDTIME}"
 
 	if [ -f ${KNITTERPATH}/knitter-plugin/knitter-plugin ];then
-		echo "++++ build plugin:: build plugin"
+		echo "++++ build ${MODULENAME} success"
 		exit 0			
 	else
 		echo "++++ build plugin:: error plugin not exist"

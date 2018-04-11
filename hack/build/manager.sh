@@ -23,15 +23,15 @@ echo "after GOROOT=$GOROOT    GOPATH=$GOPATH  GO=$GO   KNITTERPATH=${KNITTERPATH
 
 if [ ${OPERATION} = "build" ];then
 	############## build begin ##############
-	echo "============== build operation =============="
+	echo "============== building ${MODULENAME} =============="
 	cd  ${KNITTERPATH}/knitter-manager
 	${GO}/go clean
-	${GO}/go build -v -x -ldflags "-X ${BUILDPKG}/pkg/version.moduleName=${MODULENAME} -X ${BUILDPKG}/pkg/version.verType=${VERTYPE} -X ${BUILDPKG}/pkg/version.versionInfo=${BRANCH_VERSION} -X ${BUILDPKG}/pkg/version.gitHash=${GITHASH} -X ${BUILDPKG}/pkg/version.buildTime=${BUILDTIME}"
+	${GO}/go build -ldflags "-X ${BUILDPKG}/pkg/version.moduleName=${MODULENAME} -X ${BUILDPKG}/pkg/version.verType=${VERTYPE} -X ${BUILDPKG}/pkg/version.versionInfo=${BRANCH_VERSION} -X ${BUILDPKG}/pkg/version.gitHash=${GITHASH} -X ${BUILDPKG}/pkg/version.buildTime=${BUILDTIME}"
 	if [ -f ${KNITTERPATH}/knitter-manager/knitter-manager ];then
-			echo "++++ build manager success"  
+			echo "++++ build ${MODULENAME} success"
 			exit 0
 	else
-			echo "++++ build_manager:: error knitter-manager is not exit"
+			echo "++++ build_manager:: error knitter-manager is not existing"
 			exit 1
 	fi
 fi
