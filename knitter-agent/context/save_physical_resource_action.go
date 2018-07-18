@@ -63,13 +63,13 @@ func (this *SavePhysicalResourceAction) RollBack(transInfo *transdsl.TransInfo) 
 		InterfaceID: southIf.port.PortID}
 	err := phsNorthMgr.DeleteInterface()
 	if err != nil {
-		klog.Info("SavePhysicalResourceAction:RollBack: DeleteInterface[phsNorthMgr: %+v] FAIL, error: %v",
+		klog.Infof("SavePhysicalResourceAction:RollBack: DeleteInterface[phsNorthMgr: %+v] FAIL, error: %v",
 			phsNorthMgr, err)
 	}
 
 	err = southIf.vnicRole.DeleteResourceFromLocalDB()
 	if err != nil {
-		klog.Info("SavePhysicalResourceAction:RollBack: DeleteResourceFromLocalDB[vnicRole: %+v] FAIL, error: %v",
+		klog.Infof("SavePhysicalResourceAction:RollBack: DeleteResourceFromLocalDB[vnicRole: %+v] FAIL, error: %v",
 			southIf.vnicRole, err)
 	}
 	klog.Info("***SavePhysicalResourceAction:RollBack end***")
