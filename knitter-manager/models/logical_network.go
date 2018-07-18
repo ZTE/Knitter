@@ -184,6 +184,10 @@ func NetworkObjKeyFunc(obj interface{}) (string, error) {
 		return "", errobj.ErrObjectPointerIsNil
 	}
 
+	if NetObj, ok := obj.(string); ok {
+		return NetObj, nil
+	}
+
 	NetObj, ok := obj.(*NetworkObject)
 	if !ok {
 		klog.Error("NetworkObjKeyFunc: obj arg is not type: *NetworkObject")

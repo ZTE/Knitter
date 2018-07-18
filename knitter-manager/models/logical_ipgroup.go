@@ -47,6 +47,10 @@ func IPGroupObjKeyFunc(obj interface{}) (string, error) {
 		return "", errobj.ErrObjectPointerIsNil
 	}
 
+	if igObj, ok := obj.(string); ok {
+		return igObj, nil
+	}
+
 	igObj, ok := obj.(*IPGroupObject)
 	if !ok {
 		klog.Error("IPGroupObjKeyFunc: obj arg is not type: *IPGroupObject")

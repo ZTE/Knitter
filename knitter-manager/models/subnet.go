@@ -151,6 +151,10 @@ func SubnetObjKeyFunc(obj interface{}) (string, error) {
 		return "", errobj.ErrObjectPointerIsNil
 	}
 
+	if subnetObj, ok := obj.(string); ok {
+		return subnetObj, nil
+	}
+
 	subnetObj, ok := obj.(*SubnetObject)
 	if !ok {
 		klog.Error("SunbetObjKeyFunc: obj arg is not type: *SubnetObject")

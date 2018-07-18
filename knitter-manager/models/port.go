@@ -882,6 +882,10 @@ func PortObjKeyFunc(obj interface{}) (string, error) {
 		return "", errobj.ErrObjectPointerIsNil
 	}
 
+	if portObj, ok := obj.(string); ok {
+		return portObj, nil
+	}
+
 	portObj, ok := obj.(*PortObj)
 	if !ok {
 
