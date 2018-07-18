@@ -133,7 +133,7 @@ func forceDeleteNetwork(tenantID, id string) error {
 	}
 
 	err = iaas.GetIaaS(tenantID).DeleteNetwork(id)
-	if err != nil {
+	if err != nil && !errobj.IsCanNotFindErr(err) {
 		klog.Errorf("DelNetwork: delete network(id: %s) from iaas FAIL, error: %v", id, err)
 		return err
 	}

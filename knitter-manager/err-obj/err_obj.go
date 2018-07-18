@@ -15,10 +15,25 @@ package errobj
 
 import (
 	"errors"
+	"strings"
+
+	"github.com/ZTE/Knitter/pkg/klog"
 )
 
 func IsEqual(errLeft, errRight error) bool {
 	return errLeft.Error() == errRight.Error()
+}
+
+func IsCanNotFindErr(err error) bool {
+	if err == nil {
+		return false
+	}
+	errStr := err.Error()
+	if strings.Contains(errStr, "can-not-find") {
+		klog.Error(err)
+		return true
+	}
+	return false
 }
 
 var (
