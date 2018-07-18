@@ -902,7 +902,7 @@ func (lb logBridge) Write(b []byte) (n int, err error) {
 // Arguments are handled in the manner of fmt.Print; a newline is appended if missing.
 func Trace(args ...interface{}) {
 	if Level(traceLog) >= logging.level.get() {
-		logging.print(traceLog, args)
+		logging.print(traceLog, args...)
 	}
 }
 
@@ -940,7 +940,7 @@ func Tracef(format string, args ...interface{}) {
 // Arguments are handled in the manner of fmt.Print; a newline is appended if missing.
 func Debug(args ...interface{}) {
 	if Level(debugLog) >= logging.level.get() {
-		logging.print(debugLog, args)
+		logging.print(debugLog, args...)
 	}
 }
 
@@ -978,7 +978,7 @@ func Debugf(format string, args ...interface{}) {
 // Arguments are handled in the manner of fmt.Print; a newline is appended if missing.
 func Info(args ...interface{}) {
 	if Level(infoLog) >= logging.level.get() {
-		logging.print(infoLog, args)
+		logging.print(infoLog, args...)
 	}
 }
 
@@ -1016,7 +1016,7 @@ func Infof(format string, args ...interface{}) {
 // Arguments are handled in the manner of fmt.Print; a newline is appended if missing.
 func Warning(args ...interface{}) {
 	if Level(warningLog) >= logging.level.get() {
-		logging.print(warningLog, args)
+		logging.print(warningLog, args...)
 	}
 }
 
@@ -1054,7 +1054,7 @@ func Warningf(format string, args ...interface{}) {
 // Arguments are handled in the manner of fmt.Print; a newline is appended if missing.
 func Error(args ...interface{}) {
 	if Level(errorLog) >= logging.level.get() {
-		logging.print(errorLog, args)
+		logging.print(errorLog, args...)
 	}
 }
 
