@@ -388,7 +388,7 @@ func (self *IPGroup) isValidSpecificIPs() bool {
 		return false
 	}
 	for _, ip := range ips {
-		if !isFixIPInCidr(ip, self.SubnetCidr) || !isFixIPInIPRanges(ip, self.SubnetPools) {
+		if !isFixIPInCidr(ip, self.SubnetCidr) {
 			return false
 		}
 	}
