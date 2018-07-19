@@ -67,7 +67,7 @@ func (this *GetPodAction) Exec(transInfo *transdsl.TransInfo) (err error) {
 	}
 	if err != nil {
 		klog.Errorf("GetPod info error: %v", err)
-		return errors.New("GetPodAction:GetPod error")
+		//return errors.New("GetPodAction:GetPod error")
 	}
 
 	podObj, err := podobj.CreatePodObj(knitterObj.CniParam, monitorPod)
