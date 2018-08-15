@@ -27,7 +27,7 @@ if [ ${OPERATION} = "build" ];then
 	echo "============== building ${MODULENAME} =============="
 	cd  ${KNITTERPATH}/knitter-plugin
 	${GO}/go clean
-	${GO}/go build -o knitter-plugin -ldflags "-X github.com/ZTE/Knitter/pkg/version.moduleName=${MODULENAME} -X github.com/ZTE/Knitter/pkg/version.verType=${VERTYPE} -X github.com/ZTE/Knitter/pkg/version.versionInfo=${BRANCH_VERSION} -X github.com/ZTE/Knitter/pkg/version.gitHash=${GITHASH} -X github.com/ZTE/Knitter/pkg/version.buildTime=${BUILDTIME}"
+	CGO_ENABLED=0 ${GO}/go build -o knitter-plugin -ldflags '-X github.com/ZTE/Knitter/pkg/version.moduleName=${MODULENAME} -X github.com/ZTE/Knitter/pkg/version.verType=${VERTYPE} -X github.com/ZTE/Knitter/pkg/version.versionInfo=${BRANCH_VERSION} -X github.com/ZTE/Knitter/pkg/version.gitHash=${GITHASH} -X github.com/ZTE/Knitter/pkg/version.buildTime=${BUILDTIME} -extldflags "-static"'
 
 	if [ -f ${KNITTERPATH}/knitter-plugin/knitter-plugin ];then
 		echo "++++ build ${MODULENAME} success"
