@@ -28,7 +28,7 @@ if [ ${OPERATION} = "build" ];then
 	echo "============== building ${MODULENAME} =============="
 	cd  ${KNITTERPATH}/knitter-agent
 	${GO}/go clean
-	${GO}/go build -ldflags "-X ${BUILDPKG}/pkg/version.moduleName=${MODULENAME} -X ${BUILDPKG}/pkg/version.verType=${VERTYPE} -X ${BUILDPKG}/pkg/version.versionInfo=${BRANCH_VERSION} -X ${BUILDPKG}/pkg/version.gitHash=${GITHASH} -X ${BUILDPKG}/pkg/version.buildTime=${BUILDTIME}"
+	CGO_ENABLED=0 ${GO}/go build -ldflags '-X ${BUILDPKG}/pkg/version.moduleName=${MODULENAME} -X ${BUILDPKG}/pkg/version.verType=${VERTYPE} -X ${BUILDPKG}/pkg/version.versionInfo=${BRANCH_VERSION} -X ${BUILDPKG}/pkg/version.gitHash=${GITHASH} -X ${BUILDPKG}/pkg/version.buildTime=${BUILDTIME} -extldflags "-static"'
 
 	if [ -f ${KNITTERPATH}/knitter-agent/knitter-agent ];then
 		echo "++++ build ${MODULENAME} success"
