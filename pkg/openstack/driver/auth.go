@@ -162,6 +162,7 @@ func (auth *AuthConfig) setTokenAndTenantInfo(authJSON *jason.Object) error {
 	}
 	auth.TenantName = tenantName
 	return nil
+	
 }
 
 func (auth *AuthConfig) setEndpoints(authJSON *jason.Object) error {
